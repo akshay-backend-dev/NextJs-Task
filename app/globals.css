@@ -12,6 +12,10 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
+  background-image: url("/landingPageBg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .content {
