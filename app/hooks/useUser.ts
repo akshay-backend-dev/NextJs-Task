@@ -1,17 +1,17 @@
-"use client";
+// "use client";
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-type User = {
-  name: string;
-};
+// type User = {
+//   name: string;
+// };
 
-export function useUser() {
-  const [user, setUser] = useState<User | null>(null);
+// export function useUser() {
+//   const [user, setUser] = useState<User | null>(null);
 
-  useEffect(() => {
-    setUser({ name: "Akshay" });
-  }, []);
+//   useEffect(() => {
+//     setUser({ name: "Akshay" });
+//   }, []);
 
-  return user;
-}
+//   return user;
+// }
