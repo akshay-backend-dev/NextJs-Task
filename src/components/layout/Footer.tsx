@@ -1,12 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import footerLocation from "@/public/images/footer/footerLocation.png";
-import footerCall from "@/public/images/footer/footerCall.png";
-import footerMail from "@/public/images/footer/footerMail.png";
-import footerMainLogo from "@/public/images/footer/footerMainLogo.png";
-import footerPlane from "@/public/images/footer/footerPlane.png";
-
 import { RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -27,7 +21,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="flex cursor-pointer gap-3"
           >
-            <Image src={footerLocation} alt="Location" className="h-12 w-12" />
+            <Image src="/images/footer/footerLocation.png" alt="Location" width={48} height={48} className="h-12 w-12 object-contain" />
             <div className="text-lg leading-relaxed">
               Find Us <br />
               <span className="font-bold">
@@ -42,7 +36,7 @@ const Footer = () => {
             href="tel:+918907400008"
             className="flex cursor-pointer gap-3"
           >
-            <Image src={footerCall} alt="Call" className="h-12 w-12" />
+            <Image src="/images/footer/footerCall.png" alt="Call" width={48} height={48} className="h-12 w-12 object-contain" />
             <div className="text-lg leading-relaxed">
               Call Us <br />
               <span className="font-bold">91-8907400008</span>
@@ -54,14 +48,13 @@ const Footer = () => {
             href="mailto:info@adaired.com"
             className="flex cursor-pointer gap-3"
           >
-            <Image src={footerMail} alt="Mail" className="h-12 w-12" />
+            <Image src="/images/footer/footerMail.png" alt="Mail" width={48} height={48} className="h-12 w-12 object-contain" />
             <div className="text-lg leading-relaxed">
               Mail Us <br />
               <span className="font-bold">info@adaired.com</span>
             </div>
           </a>
         </div>
-
 
         {/* DIVIDER */}
         <div className="mt-8 w-4/5 border-t border-[#E5E7EB]/70 pt-8" />
@@ -70,7 +63,7 @@ const Footer = () => {
         <div className="flex w-4/5 gap-8 pb-12">
           {/* Left */}
           <div className="flex w-1/2 flex-col gap-6">
-            <Image src={footerMainLogo} alt="Logo" />
+            <Image src="/images/footer/footerMainLogo.png" alt="Logo" width={180} height={60} />
             <p>
               AdAired Digital Media is a digital marketing company located in
               Mohali. We are a team of marketing and design experts who are committed to
@@ -165,7 +158,7 @@ const Footer = () => {
                   className="h-12 w-full rounded-full px-4 text-sm text-black outline-none bg-white"
                 />
                 <button className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#FB9100] transition hover:bg-[#e67f00] cursor-pointer">
-                  <Image src={footerPlane} alt="Plane" className="h-5 w-5" />
+                  <Image src="/images/footer/footerPlane.png" alt="Plane" width={20} height={20} />
                 </button>
               </div>
             </div>

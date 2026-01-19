@@ -2,11 +2,8 @@
 
 import { usePathname } from "next/navigation";
 
-
 import Link from "next/link";
 import Image from "next/image";
-
-import logo from "@/public/images/navbar/mainLogo.png";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { FaArrowUpLong } from "react-icons/fa6";
@@ -19,9 +16,10 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src={logo}
+            src="/images/navbar/mainLogo.png"
             alt="Logo"
-            className="h-12 w-auto"
+            width={150}
+            height={48}
             priority
           />
         </Link>
@@ -61,23 +59,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// const NavItem = ({
-//   href,
-//   children,
-// }: {
-//   href: string;
-//   children: React.ReactNode;
-// }) => (
-//   <Link
-//     href={href}
-//     className="flex items-center gap-1 rounded-full px-5 py-1.5 text-sm text-black transition hover:bg-[#FB9100] hover:text-white"
-//   >
-//     {children}
-//   </Link>
-// );
-
-
 
 const NavItem = ({
   href,
