@@ -1,28 +1,23 @@
-body,
-html {
+@import "tailwindcss";
+
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   overflow-x: hidden;
   font-family: var(--font-poppins), sans-serif;
 }
 
-.landing-page {
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-image: url("/landingPageBg1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/* Custom theme */
+@theme {
+  --animate-pulse-scale: pulse-scale 1.8s infinite;
 
-.content {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @keyframes pulse-scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
 }
