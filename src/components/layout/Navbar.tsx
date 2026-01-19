@@ -10,23 +10,23 @@ import { FaArrowUpLong } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 left-0 z-50 flex h-28 w-full items-center justify-center">
-      <div className="flex h-20 w-4/5 items-center gap-3 rounded-full border-b border-gray-200 bg-white px-6">
+    <header className="fixed top-0 left-0 z-50 flex h-32 w-full items-center justify-center">
+      <div className="flex h-23 w-84/100 items-center gap-2 rounded-full border-b border-gray-200 bg-white px-4 pl-7">
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/navbar/mainLogo.png"
+            src="/images/navbar/mainLogo.svg"
             alt="Logo"
-            width={150}
-            height={48}
+            width={130}
+            height={65}
             priority
           />
         </Link>
 
         {/* Menu */}
-        <nav className="ml-20 flex h-12 w-1/2 items-center justify-center gap-4 rounded-full bg-orange-50">
-          <NavItem href="/about">About</NavItem>
+        <nav className="ml-70 flex h-15 w-40/100 items-center justify-center gap-2 rounded-full bg-orange-50">
+          <NavItem href="/about">About Us</NavItem>
 
           <NavItem href="/services">
             Services <IoIosArrowDown />
@@ -41,7 +41,7 @@ const Navbar = () => {
 
         {/* Book a Call */}
         <Link href="/contact-us">
-          <span className="ml-16 flex h-12 w-56 cursor-pointer items-center justify-center active:scale-95 rounded-full border border-black transition hover:bg-[#FB9100] hover:text-white hover:border-transparent">
+          <span className="ml-65 flex h-13 w-56 text-lg cursor-pointer items-center justify-center active:scale-95 rounded-full border border-black transition hover:bg-[#FB9100] hover:text-white hover:border-transparent">
             Book a Call
           </span>
         </Link>
@@ -74,9 +74,9 @@ const NavItem = ({
     <Link
       href={href}
       className={`
-        flex items-center gap-1
+        flex items-center gap-0.5
         rounded-full px-5 py-1.5
-        text-sm transition
+        text-lg transition
 
         ${isActive
           ? "bg-[#FB9100] text-white"

@@ -1,0 +1,550 @@
+----------------
+** NAVBAR TSX **
+----------------
+
+import Link from "next/link";
+import Image from "next/image";
+
+import logo from "@/public/images/navbar/mainLogo.png";
+
+import { IoIosArrowDown } from "react-icons/io";
+import { FaArrowUpLong } from "react-icons/fa6";
+
+import "@/styles/navbar.css";
+
+const Navbar: React.FC = () => {
+  return (
+    <header className="navbar-wrapper">
+      <div className="navbar-container">
+        <div className="navbar-logo">
+          <Link href="/">
+            <Image className="logo" src={logo} alt="Logo" />
+          </Link>
+        </div>
+
+        <nav className="navbar-menu">
+          <Link href="/about">About</Link>
+          <Link href="/services">Services <IoIosArrowDown /></Link>
+          <Link href="/resources">Resources <IoIosArrowDown /></Link>
+          <Link href="/contact-us">Contact Us</Link>
+        </nav>
+
+        <span className="navbar-bac-btn">Book a Call</span>
+        <span className="navbar-arrow-circle">
+          <FaArrowUpLong className="navbar-arrow" />
+        </span>
+      </div>
+    </header >
+  );
+};
+
+export default Navbar;
+
+
+----------------
+** NAVBAR CSS **
+----------------
+
+.navbar-wrapper {
+  height: 111px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  height: 80px;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  border-bottom: 2px solid #e5e7eb;
+  border-radius: 50px;
+}
+
+.logo {
+  height: 50px;
+  width: 100%;
+}
+
+.navbar-menu {
+  height: 50px;
+  width: 45%;
+  margin-left: 80px;
+  background-color: #FFF7EC;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-menu a {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  padding: 6px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.navbar-menu a:hover {
+  background-color: #FB9100;
+  color: white;
+}
+
+.navbar-bac-btn {
+  height: 50px;
+  width: 222px;
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid black;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.navbar-bac-btn:hover {
+  background-color: #FB9100;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.navbar-arrow-circle {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #FB9100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.navbar-arrow {
+  font-size: 20px;
+  color: white;
+  transform: rotate(45deg);
+  transition: transform 0.6s ease;
+}
+
+.navbar-arrow-circle:hover .navbar-arrow {
+  transform: rotate(90deg);
+}
+
+
+----------------
+** FOOTER TSX **
+----------------
+
+import Link from "next/link";
+import Image from "next/image";
+
+import footerLocation from "@/public/images/footer/footerLocation.png";
+import footerCall from "@/public/images/footer/footerCall.png";
+import footerMail from "@/public/images/footer/footerMail.png";
+
+import footerMainLogo from "@/public/images/footer/footerMainLogo.png";
+import footerPlane from "@/public/images/footer/footerPlane.png";
+
+import { RiFacebookFill } from "react-icons/ri";
+import { FaXTwitter } from "react-icons/fa6";
+import { RiInstagramLine } from "react-icons/ri";
+import { RiLinkedinFill } from "react-icons/ri";
+
+import "@/styles/footer.css";
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+
+        <div className="footer-container-top">
+          <div className="footer-location-container">
+            <div>
+              <Image className="footer-location-icon" src={footerLocation} alt="Location" />
+            </div>
+            <div className="footer-location">
+              Find Us <br />
+              <span className="footer-text-bold">
+                B-509, 5th Floor, Bestech Business Towers, <br />
+                Sector 66, SAS Nagar, Punjab 160066
+              </span>
+            </div>
+          </div>
+
+          <div className="footer-contact-container">
+            <div>
+              <Image className="footer-contact-icon" src={footerCall} alt="Call" />
+            </div>
+            <div className="footer-contact">
+              Call Us <br />
+              <span className="footer-text-bold">
+                91-8907400008
+              </span>
+            </div>
+          </div>
+
+          <div className="footer-mail-container">
+            <div>
+              <Image className="footer-mail-icon" src={footerMail} alt="Mail" />
+            </div>
+            <div className="footer-mail">
+              Mail Us <br />
+              <span className="footer-text-bold">
+                info@adaired.com
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="footer-container-bottom">
+          <div className="footer-social-info">
+            <Image className="footer-main-logo" src={footerMainLogo} alt="Main Logo" />
+            AdAired Digital Media is a digital marketing company located in Mohali.
+            We are a team of marketing and design experts who are committed to your online growth.
+            <div className="footer-social-icons">
+              <span className="footer-facebook-icon"><RiFacebookFill /></span>
+              <span className="footer-twitter-icon"><FaXTwitter /></span>
+              <span className="footer-instagram-icon"><RiInstagramLine /></span>
+              <span className="footer-linkedin-icon"><RiLinkedinFill /></span>
+            </div>
+          </div>
+
+          <div className="footer-content">
+            <div className="footer-links">
+              <span className="footer-content-heading">Useful links</span>
+              <span className="footer-content-heading-line"></span>
+              <ul className="footer-useful-links">
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
+                <li><Link href="/case-studies">Case Studies</Link></li>
+                <li><Link href="/career">Career</Link></li>
+                <li><Link href="/contact-us">Contact Us</Link></li>
+              </ul>
+            </div>
+
+            <div className="footer-services">
+              <span className="footer-content-heading">Services</span>
+              <span className="footer-content-heading-line"></span>
+              <ul className="footer-services-links">
+                <li><Link href="/website-design">Website Designing & Development</Link></li>
+                <li><Link href="/seo">Search Engine Optimization (SEO)</Link></li>
+                <li><Link href="/digital-marketing">Digital Marketing Services USA</Link></li>
+                <li><Link href="/digital-marketing-india">Digital Marketing Company India</Link></li>
+                <li><Link href="/seo-services">SEO Services USA</Link></li>
+                <li><Link href="/web-development">Web Development Company USA</Link></li>
+              </ul>
+            </div>
+
+            <div className="footer-subscribe">
+              <span className="footer-content-heading">Subscribe</span>
+              <span className="footer-content-heading-line"></span>
+              <p>Share your email address to subscribe to Adaired&apos;s newsletter.</p>
+              <form className="footer-subscribe-form">
+                <div className="footer-subscribe-wrapper">
+                  <input type="email" className="footer-subscribe-input" placeholder="Email Address*" required />
+                  <span className="footer-subscribe-button">
+                    <Image className="footer-btn-plane" src={footerPlane} alt="Plane" />
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        Copyright © {new Date().getFullYear()} - AdAired Digital Media | Terms & Conditions / Privacy Policy
+      </div>
+    </footer >
+  );
+};
+
+export default Footer;
+
+
+----------------
+** FOOTER CSS **
+----------------
+
+.footer {
+    height: 106vh;
+    width: 100%;
+    background-color: grey;
+}
+
+.footer-container {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url("images/footer/footerBg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-container-top {
+    height: 30%;
+    width: 80%;
+    display: flex;
+    gap: 31px;
+    margin-top: 45px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-location-container,
+.footer-contact-container,
+.footer-mail-container {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-location-icon,
+.footer-contact-icon,
+.footer-mail-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-location,
+.footer-contact,
+.footer-mail {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.footer-text-bold {
+    font-weight: bold;
+}
+
+.footer-container-bottom {
+    height: 100%;
+    width: 80%;
+    border-top: 1px solid white;
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    justify-content: flex-start;
+}
+
+.footer-social-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-facebook-icon,
+.footer-twitter-icon,
+.footer-linkedin-icon,
+.footer-instagram-icon {
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    border-radius: 50px;
+    color: #1B5A96;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+}
+
+.footer-content-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-content-heading-line {
+    display: block;
+    width: 60px;
+    height: 1.5px;
+    background-color: #FB9100;
+    margin: 7px 0;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    width: 25%;
+}
+
+.footer-useful-links,
+.footer-services-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-useful-links a,
+.footer-services-links a {
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-services {
+    width: 50%;
+}
+
+.footer-subscribe {
+    width: 45%;
+}
+
+.footer-subscribe-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.footer-subscribe-input {
+  width: 100%;
+  height: 46px;
+  padding: 0 0 0 14px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.footer-subscribe-button {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #fb9100;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.footer-subscribe-button:hover {
+  background-color: #e67f00;
+}
+
+.footer-btn-plane {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: whitesmoke;
+}
+
+
+--------
+HOME TSX
+--------
+
+import Footer from "../components/layout/Footer";
+import Navbar from "../components/layout/Navbar";
+
+import "../styles/globals.css";
+
+export default function Home() {
+  return (
+    <>
+      <section className="landing-page">
+        <Navbar />
+        <div className="content">
+          <h1>Welcome to Our Website</h1>
+          <p>Your gateway to exceptional services and resources.</p>
+        </div>
+        <Footer />
+      </section>
+    </>
+  );
+}
+
+
+----------
+GLOBAL CSS
+----------
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.landing-page {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("/landingPage/landingPageBg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
