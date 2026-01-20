@@ -8,16 +8,92 @@ body {
   font-family: var(--font-poppins), sans-serif;
 }
 
+.hero-mini-card {
+  @apply bg-white px-2 py-2 w-36 text-left border-2 border-[#E5E7EB] rounded-md;
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+.hero-mini-card p {
+  @apply text-[8px] text-gray-800;
+}
+
+.hero-mini-card h4 {
+  @apply text-[11px] font-bold text-black;
+}
+
+.hero-mini-card span {
+  @apply text-[8px] font-semibold;
+}
+
+
+
+.animate-card-1 {
+  animation: float-seq 3s ease-in-out infinite;
+}
+
+.animate-card-2 {
+  animation: float-seq 3s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-card-3 {
+  animation: float-seq 3s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.animate-card-4 {
+  animation: float-seq 3s ease-in-out infinite;
+  animation-delay: 6s;
+}
+
+
 /* Custom theme */
 @theme {
   --animate-pulse-scale: pulse-scale 1.8s infinite;
 
+  --animate-float-adaired: float-adaired 4s ease-in-out infinite;
+
   @keyframes pulse-scale {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: scale(1);
     }
+
     50% {
       transform: scale(1.2);
     }
+  }
+
+  @keyframes float-seq {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  @keyframes float-adaired {
+
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    25% {
+      transform: translate(-180px, 100px);
+    }
+
+    50% {
+      transform: translate(0, -6px);
+    }
+
+    /* 75% {
+      transform: translate(-8px, -10px);
+    } */
   }
 }
